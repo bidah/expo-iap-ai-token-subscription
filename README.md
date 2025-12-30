@@ -2,6 +2,10 @@
 
 A database-agnostic IAP subscription build on top of [expo-iap](https://github.com/hyochan/expo-iap) and AI token/generation management library for Expo React Native apps.
 
+```
+⚠️ FYI: This is an alpha version. All the logic here is working on production but the port to this library is a first release pass. 
+```
+
 ## The Problem
 
 Building AI-powered apps with in-app subscriptions is complex. When your app offers token-based features—like AI image generations, chat completions, or any metered AI usage—you face a maze of edge cases:
