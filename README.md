@@ -2,6 +2,29 @@
 
 A database-agnostic IAP subscription and AI token/generation management library for Expo React Native apps.
 
+## The Problem
+
+Building AI-powered apps with in-app subscriptions is complex. When your app offers token-based features—like AI image generations, chat completions, or any metered AI usage—you face a maze of edge cases:
+
+- **Free tier limits**: How many generations can free users access?
+- **Pro tier caps**: What happens when paying users hit their monthly quota?
+- **Subscription validation**: Is this user still subscribed this month?
+- **Renewal detection**: Did Apple just auto-renew? Time to reset their tokens.
+- **Cross-device state**: Keeping generation counts in sync with your backend.
+
+Managing all this while juggling `expo-iap` purchase flows, App Store receipt validation, and database synchronization quickly becomes a maintenance nightmare.
+
+## The Solution
+
+This library bridges `expo-iap` with your database, providing the complete logic layer for token-based subscription apps. Instead of wiring together purchase handlers, renewal listeners, and generation counters yourself, you get:
+
+- A unified API that handles the IAP ↔ database sync
+- Automatic renewal detection that resets tokens on new billing cycles
+- Configurable tier limits with built-in enforcement
+- React hooks that make subscription state trivial to consume
+
+Focus on your AI features. Let this library handle the subscription plumbing.
+
 ## Features
 
 - **Database-agnostic**: Bring your own backend (Supabase, Firebase, custom API)
@@ -381,6 +404,10 @@ clearMockDate();
 ## Expo Router Integration
 
 See [examples/expo-router-integration.md](./examples/expo-router-integration.md) for detailed integration patterns.
+
+## Author
+
+**Rodrigo Figueroa** – Follow [@bidah](https://x.com/bidah) for more React Native content.
 
 ## License
 
