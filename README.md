@@ -1,6 +1,6 @@
 # expo-iap-ai-token-subscription
 
-A database-agnostic IAP subscription and AI token/generation management library for Expo React Native apps.
+A database-agnostic IAP subscription build on top of [expo-iap](https://github.com/hyochan/expo-iap) and AI token/generation management library for Expo React Native apps.
 
 ## The Problem
 
